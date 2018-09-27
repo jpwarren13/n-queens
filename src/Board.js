@@ -155,7 +155,7 @@
       for (var i = 0; i < this.get(0).length; i++){
 
         //console.log(this.get(j)[i]);
-        if (this.get(i)[j] || this.get(j)[i]){
+        if (this.get(i)[j]|| this.get(j)[i]){
           count++;
         }         
         
@@ -190,38 +190,38 @@ return false;
     // test if a specific minor diagonal on this board contains a conflict
     hasMinorDiagonalConflictAt: function(minorDiagonalColumnIndexAtFirstRow) {
 
-      var count = 0;
+      // var count = 0;
 
-      if (minorDiagonalColumnIndexAtFirstRow < 0){
-        minorDiagonalColumnIndexAtFirstRow = 0;
-      }
-      let j = minorDiagonalColumnIndexAtFirstRow;
+      // if (minorDiagonalColumnIndexAtFirstRow < 0){
+      //   minorDiagonalColumnIndexAtFirstRow = 0;
+      // }
+      // let j = minorDiagonalColumnIndexAtFirstRow;
 
-      let xIndex = this.get(0).length-1;
-      let yIndex = this.get(0).length-1;
-      debugger;
-      for (var i = 0; i < this.get(0).length; i++){
-        if (this.get(i)[j] || this.get(yIndex-j)[xIndex-i]){
-          count++;
-        }
-        if (count > 1){
-          return true;
-        }
-        if (j>0){
-          j--;
-        }
-      }
+      // let xIndex = this.get(0).length-1;
+      // let yIndex = this.get(0).length-1;
+
+      // for (var i = 0; i < this.get(0).length; i++){
+      //   if (this.get(i)[j] || this.get(yIndex-j)[xIndex-i]){
+      //     count++;
+      //   }
+      //   if (count > 1){
+      //     return true;
+      //   }
+      //   if (j>0){
+      //     j--;
+      //   }
+      // }
 
     },
 
     // test if any minor diagonals on this board contain conflicts
     hasAnyMinorDiagonalConflicts: function() {
-      for (let i = 0; i < this.get(0).length; i++){
-        if(this.hasMinorDiagonalConflictAt(i)){
-          return true;
-        }
-      }
-      return false;
+      // for (let i = 0; i < this.get(0).length; i++){
+      //   if(this.hasMinorDiagonalConflictAt(i)){
+      //     return true;
+      //   }
+      // }
+      // return false;
 
     }
 
